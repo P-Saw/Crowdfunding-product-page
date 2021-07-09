@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap');
+
+*,*::after,*::before{
+    box-sizing: border-box;
+}
+
+html, body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Commissioner', sans-serif;
+}
+
+/*  =======
+    HEADER
+    =======*/
+
+header{
+    position: relative;
+    background: url(./images/image-hero-mobile.jpg) no-repeat center center/cover;
+    min-height: 20rem;
+    margin-bottom: -3rem;
+}
+
+.header-wrapper{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    min-height: 20rem;
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(255,255,255,0) 40%);
+}
+
+.navbar{
+    padding-top: 2rem;
+    margin: auto;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text-logo{
+    display: flex;
+}
+
+.nav{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 5rem;
+    width: 90%;
+    background-color: white;
+    border-radius: 1rem;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform .3s ease-in;
+    z-index: 3;
+}
+.nav-open{
+    transform: scaleY(1);
+}
+.nav a{
+    width: 100%;
+    text-decoration: none;
+    color: hsl(0, 0%, 0%);
+    font-weight: 700;
+    padding: 1.5rem;
+    border-bottom: 1px rgb(212, 212, 212) solid;
+}
+.nav a:last-child{
+    border-radius: 0 0 1rem 1rem ;
+}
+
+/* HAMBURGER ICON */
+
+.menu-hamburger{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 40px;
+    cursor: pointer;
+    transition: transform .5s ease-in-out;
+}
+
+.icon-hamburger{
+    width: 20px;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transition: transform .5s ease-in-out, background .5s ease-in-out;
+}
+
+.icon-hamburger::before,
+.icon-hamburger::after{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transition: transform .5s ease-in-out;
+}
+
+.icon-hamburger::before{
+    transform: translateY(-7px);
+}
+
+.icon-hamburger::after{
+    transform: translateY(7px);
+}
+
+.menu-hamburger.open .icon-hamburger{
+    transform: translateX(-50px);
+    background: transparent;
+}
+
+.menu-hamburger.open .icon-hamburger::before{
+    transform: rotate(45deg) translate(35px, -35px);
+}
+
+.menu-hamburger.open .icon-hamburger::after{
+    transform: rotate(-45deg) translate(35px, 35px);
+}
+
+/*  ===============
+    MAIN - SECTIONS
+    ===============*/
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+}
+/* SECTION HEADINGS PHARAGRAPHS GLOBAL */
+section{
+    width: 90%;
+    border: 1px rgb(212, 212, 212) solid;
+    border-radius: 1rem;
+    text-align: center;
+    padding: 1rem;
+}
+h1{
+    font-size: 2rem;
+    margin: 0;
+}
+h2{
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+}
+h3{
+    font-size: 1.1rem;
+}
+p{
+    font-size: 1rem;
+    color: hsl(0, 0%, 48%);
+    line-height: 1.5rem;
+    padding-bottom: 1rem;
+}
+/* BUTTONS */
+.btn{
+    color: white;
+    background-color: hsl(176, 50%, 47%);
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 2rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: hsl(176, 72%, 28%);
+}
+.btn-out{
+    background-color: hsl(0, 0%, 48%);
+}
+.btn-out:hover{
+    background-color: hsl(0, 0%, 48%);
+}
+.first-container-btns{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+}
+.btn-bookmark{
+    border:none;
+    border-radius: 50%;
+    padding: 0;
+    cursor: pointer;
+    background-color: white;
+}
+.btn-bookmark img{
+    padding-left: 0.5rem;
+}
+
+/* FIRST CONTAINER */
+.first-container{
+    background-color: white;
+    z-index: 2;
+}
+.logo{
+    margin-top: -2.9rem;
+    margin-bottom: 2rem;
+}
+
+/* PROGRESS CONTAINER */
+.progress-container p{
+    margin-top: 0.4rem;
+}
+hr{
+    width: 5rem;
+    color: rgb(212, 212, 212);
+}
+progress{
+    appearance: none;
+    width: 90%;
+    height: 1rem;
+    margin-bottom: 1rem;
+}
+progress::-webkit-progress-bar{
+    background-color: rgb(212, 212, 212);
+    border-radius: 1rem;
+}
+progress::-webkit-progress-value{
+    background-color: hsl(176, 50%, 47%);
+    border-radius: 1rem;
+}
+
+/* ABOUT CONTAINER */
+.about-container{
+    text-align: left;
+    z-index: 1;
+}
+.about-offer{
+    width: 90%;
+    margin: auto;
+    border: 1px rgb(212, 212, 212) solid;
+    border-radius: 1rem;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+}
+.price{
+    color: hsl(176, 50%, 47%);
+    font-weight: 700;
+}
+.number-of-offerts-left{
+    color: black;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-right: 0.5rem;
+}
+.number-left{
+    display: flex;
+}
+.out-of-stock{
+    opacity: 0.5;
+}
+

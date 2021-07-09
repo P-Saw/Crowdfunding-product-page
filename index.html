@@ -5,45 +5,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Crowdfunding product page</title>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="js.js" defer></script>
 </head>
 
 <body>
   <header>
-    <div class="navbar">
-      <div class="logo">
-        <img src="./images/logo-mastercraft.svg" alt="">
-      </div>
-      <nav>
-        <a href="#">About</a>
-        <a href="#">Discover</a>
-        <a href="#">Get Started</a>
-      </nav>
-      <div class="menu-hamburger">
-        <div class="icon-hamburger"></div>
+    <div class="header-wrapper">
+      <div class="navbar">
+        <div class="text-logo">
+          <img src="./images/logo.svg" alt="">
+        </div>
+        <nav class="nav">
+          <a href="#">About</a>
+          <a href="#">Discover</a>
+          <a href="#">Get Started</a>
+        </nav>
+        <div class="menu-hamburger">
+          <div class="icon-hamburger"></div>
+        </div>
       </div>
     </div>
   </header>
   <main>
     <section class="first-container">
+      <div class="logo">
+        <img src="./images/logo-mastercraft.svg" alt="">
+      </div>
       <h1>Mastercraft Bamboo Monitor Riser</h1>
-      A beautiful & handcrafted monitor stand to reduce neck and eye strain.
-      Back this project
-      Bookmark
+      <p>A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
+      <div class="first-container-btns">
+        <button class="btn back-this-project-btn">Back this project</button>
+        <button class="btn-bookmark"><img src="./images/icon-bookmark.svg" alt=""></button>
+      </div>
     </section>
     <section class="progress-container">
       <div class="total-backed">
         <h1>$89,914</h1>
         <p>of $100,000 backed</p>
       </div>
+      <hr>
       <div class="total-backers">
         <h1>5,007</h1>
         <p>total backers</p>
       </div>
+      <hr>
       <div class="days-left">
         <h1>56</h1>
         <p>days left</p>
       </div>
-      <progress></progress>
+      <progress value="89.9" max="100"></progress>
     </section>
     <section class="about-container">
       <h2>About this project</h2>
@@ -56,11 +66,6 @@
         Featuring artisan craftsmanship, the simplicity of design creates extra desk space below your computer
         to allow notepads, pens, and USB sticks to be stored under the stand.
       </p>
-      <div class="about-section-btns">
-        <button class="btn">Back this project</button>
-        <button class="bookmark"></button>
-      </div>
-
       <div class="about-offer">
         <h3>Bamboo Stand</h3>
         <span class="price">Pledge $25 or more</span>
@@ -68,23 +73,27 @@
           You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and
           you’ll be added to a special Backer member list.
         </p>
-        <p><span class="number-of-offerts-left">101</span> left</p>
+        <p class="number-left"><span class="number-of-offerts-left">101</span> left</p>
         <button class="btn">Select Reward</button>
       </div>
       <div class="about-offer">
-        Black Edition Stand
+        <h3>Black Edition Stand</h3>
         <span class="price">Pledge $75 or more</span>
-        You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer
-        member list. Shipping is included.
-        <p><span class="number-of-offerts-left">64</span>left</p>
+        <p>
+          You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer
+          member list. Shipping is included.
+        </p>
+        <p class="number-left"><span class="number-of-offerts-left">64</span>left</p>
         <button class="btn">Select Reward</button>
       </div>
-      <div class="about-offer">
-        Mahogany Special Edition
+      <div class="about-offer out-of-stock">
+        <h3>Mahogany Special Edition</h3>
         <span class="price">Pledge $200 or more</span>
-        You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
-        to our Backer member list. Shipping is included.
-        <p><span class="number-of-offerts-left">0</span> left</p>
+        <p>
+          You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
+          to our Backer member list. Shipping is included.
+        </p>
+        <p class="number-left"><span class="number-of-offerts-left">0</span> left</p>
         <button class="btn btn-out">Out of Stock</button>
       </div>
     </section>
