@@ -8,6 +8,7 @@ html, body{
     padding: 0;
     margin: 0;
     font-family: 'Commissioner', sans-serif;
+    position: relative;
 }
 
 /*  =======
@@ -262,6 +263,91 @@ progress::-webkit-progress-value{
 }
 .out-of-stock{
     opacity: 0.5;
+}
+/*  ===============
+    MODAL SELECTION
+    ===============*/
+.hide{
+    display: none;
+}
+.bg-modal-wrapper{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    z-index: 4;
+    overflow: auto;
+}
+.bg-modal-wrapper::-webkit-scrollbar {
+    display: none;
+}
+.modal-container{
+    margin: 5rem auto;
+    background-color: white;
+    width: 90%;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+.heading-icon{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+.heading-icon h2{
+    margin: 0;
+}
+/* PLADGE */
+.pladge-container{
+    width: 100%;
+    border-top: 2px rgb(212, 212, 212) solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.pladge-button{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.pladge-button input{
+    width: 7rem;
+    border-radius: 2rem;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    border: 2px rgb(212, 212, 212) solid;
+}
+.input-box{
+    position: relative;
+}
+.input-box::before{
+    content: '$';
+    color: rgb(212, 212, 212);
+    font-weight: 700;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+@media (max-width: 390px){
+    .pladge-button{
+        justify-content: center;
+    }
+    .pladge-button input{
+        margin-bottom: 1rem;
+    }
+}
+
+/* SUCCESS MODAL */
+
+.modal-success{
+    margin-top: 12rem;
+    text-align: center;
 }
 
 @media (min-width:650px){
