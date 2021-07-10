@@ -18,7 +18,7 @@ header{
     position: relative;
     background: url(./images/image-hero-mobile.jpg) no-repeat center center/cover;
     min-height: 20rem;
-    margin-bottom: -3rem;
+    margin-bottom: -4rem;
 }
 
 .header-wrapper{
@@ -33,6 +33,7 @@ header{
     padding-top: 2rem;
     margin: auto;
     width: 90%;
+    max-width: 70rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -41,7 +42,7 @@ header{
 .text-logo{
     display: flex;
 }
-
+/* DROPDOWN NAV */
 .nav{
     display: flex;
     flex-direction: column;
@@ -134,10 +135,13 @@ main{
     justify-content: center;
     gap: 1rem;
     width: 100%;
+    background-color: rgb(238, 238, 238);
 }
 /* SECTION HEADINGS PHARAGRAPHS GLOBAL */
 section{
     width: 90%;
+    max-width: 50rem;
+    background-color: white;
     border: 1px rgb(212, 212, 212) solid;
     border-radius: 1rem;
     text-align: center;
@@ -185,11 +189,14 @@ p{
     margin-bottom: 1rem;
 }
 .btn-bookmark{
+    width: 56px;
+    height: 56px;
+    background: url(./images/icon-bookmark.svg) no-repeat center center/contain;
     border:none;
     border-radius: 50%;
     padding: 0;
     cursor: pointer;
-    background-color: white;
+    background-color: rgb(212, 212, 212);
 }
 .btn-bookmark img{
     padding-left: 0.5rem;
@@ -197,7 +204,6 @@ p{
 
 /* FIRST CONTAINER */
 .first-container{
-    background-color: white;
     z-index: 2;
 }
 .logo{
@@ -258,3 +264,117 @@ progress::-webkit-progress-value{
     opacity: 0.5;
 }
 
+@media (min-width:650px){
+    /*  ======
+        HEADER
+        ======*/
+    header{
+        background: url(./images/image-hero-desktop.jpg) no-repeat center center/cover;
+    }
+    .menu-hamburger{
+        display: none;
+    }
+    /* NAV DESKTOP*/
+    .nav{
+        width: 50%;
+        background-color: transparent;
+        top: 0;
+        position: relative;
+        display: block;
+        transform: scaleY(1);
+        text-align: right;
+    }
+    .nav a{
+        width: auto;
+        color: white;
+        font-weight: 500;
+        padding: 0 1rem;
+        border: none;
+    }
+    .nav a:hover{
+        text-decoration: underline;
+        font-weight: 700;
+    }
+
+    /*  ===============
+    MAIN - SECTIONS
+    ===============*/
+    section{
+        padding: 1rem 3rem;
+    }
+    /* FIRST CONTAINER */
+    .first-container-btns{
+        justify-content: space-between;
+    }
+    .btn{
+        font-size: 1rem;
+    }
+    .btn-bookmark{
+        position: relative;
+        background-position: left center;
+        border-radius: 2rem;
+        padding: 1rem 6rem;
+    }
+    .btn-bookmark::after{
+        content: 'Bookmark';
+        position: absolute;
+        top: 50%;
+        left: 62%;
+        transform: translate(-50%, -50%);
+        color: hsl(0, 0%, 48%);
+        padding: 1rem 5rem;
+        font-weight: 700;
+        font-size: 1rem;
+    }
+
+    /* PROGRESS CONTAINER */
+    .progress-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+    .progress-data{
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+    }
+    hr{
+        width: 0.1rem;
+    }
+
+    /* ABOUT CONTAINER */
+    .about-offer{
+        padding: 1rem 2rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template: repeat(3,1fr) / repeat(2, 1fr);
+        grid-template-areas:
+        "title price"
+        "pharagraph pharagraph"
+        "number button";
+    }
+    .about-offer h3{
+        grid-area: title;
+    }
+    .price{
+        margin-top: 17.6px;
+        grid-area: price;
+        justify-self: end;
+    }
+    .about-offer p{
+        grid-area: pharagraph;
+    }
+    p.number-left{
+        padding: 0;
+        display:flex;
+        grid-area: number;
+        align-items: center;
+    }
+    .about-offer button{
+        grid-area: button;
+        align-self: center;
+        justify-self: end;
+    }
+}
