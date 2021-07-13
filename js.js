@@ -47,7 +47,7 @@ pledges.forEach(pledge =>{
                 });
         });
 
-        //asdasdasdasdasd
+        //SHOW SELECTED PLADGE
         const offersOnPage = document.querySelectorAll('.about-offer-desktop');
 
         offersOnPage.forEach(offer => {
