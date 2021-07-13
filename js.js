@@ -38,7 +38,7 @@ backThisProjectBtn.addEventListener('click', () =>{
 
 pledges.forEach(pledge =>{
         const pledgeInput = pledge.querySelector('.pledge-input');
-        const pledgeButton = pledge.querySelector('.pledge-button');
+        const pledgeButton = pledge.querySelector('.btn');
 
         // SHOW BORDER IN SELECTED PLEDGE
         pledgeInput.addEventListener('click', () =>{
